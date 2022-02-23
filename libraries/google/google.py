@@ -16,6 +16,7 @@ class Google():
         Access Google from the browser.
         """
         self.browser.go_to(self.google_url)
+        print(self.browser.get_source())
 
     def search_movie(self):
         """
