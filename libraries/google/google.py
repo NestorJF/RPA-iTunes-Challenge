@@ -16,7 +16,11 @@ class Google():
         Access Google from the browser.
         """
         self.browser.go_to(self.google_url)
-        print(self.browser.get_source())
+        #print(self.browser.get_source())
+        try:
+            act_on_element('//button[child::div[text()="I agree"]]', 'click_element', 2)
+        except Exception:
+            pass
 
     def search_movie(self):
         """
