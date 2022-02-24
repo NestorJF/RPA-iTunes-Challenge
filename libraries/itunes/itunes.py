@@ -15,7 +15,7 @@ class ITunes():
         Extracts cast information from the itunes website and goes to each artist to extract their movies.
         """
         tabs_dict['LordofTheRingiTunesPage'] = len(tabs_dict)
-        cast_elements = act_on_element('//div[@class="l-row cast-list"]//dd/a', "find_elements")
+        cast_elements = act_on_element('//div[@class="l-row cast-list"]//dd/a', "find_elements")[:5]
         self.browser.execute_javascript("window.open()")
         self.browser.switch_window(locator="NEW")
         tabs_dict['ArtistiTunesPage'] = len(tabs_dict)
